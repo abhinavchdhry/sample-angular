@@ -3,7 +3,18 @@ api_version: 1
 threadsafe: true
 handlers:
 - url: /
-  static_files: dist/index.html
-  upload: dist/index.html
+  static_files: dist/sample-angular/index.html
+  upload: dist/sample-angular/index.html
 - url: /
-  static_dir: dist
+  static_dir: dist/sample-angular/
+
+skip_files:
+  - e2e/
+  - node_modules/
+  - src/
+  - coverage
+  - ^(.*/)?\..*$
+  - ^(.*/)?.*\.json$
+  - ^(.*/)?.*\.md$
+  - ^(.*/)?.*\.yaml$
+  - ^LICENSE
